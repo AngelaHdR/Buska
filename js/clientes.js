@@ -1,0 +1,30 @@
+listCustomers = [
+    {
+        id:1,
+        name:"Angela",
+        email:"emailAngela@gmail.com",
+        phoneNumber:658478593,
+        birthDate:"10-06-2002"
+    },
+    {
+        id:2,
+        name:"David",
+        email:"emailDavid@gmail.com",
+        phoneNumber:674152841,
+        birthDate:"06-05-1996"
+    },
+    {
+        id:3,
+        name:"Isabel",
+        email:"emailIsabel@gmail.com",
+        phoneNumber:671285636,
+        birthDate:"17-09-1999"
+    },
+    {
+        id:4,
+        name:"César",
+        email:"emailCesar@gmail.com",
+        phoneNumber:671285636,
+        birthDate:"12-07-1974"
+    }
+]
