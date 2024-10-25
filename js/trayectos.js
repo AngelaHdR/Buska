@@ -88,11 +88,43 @@ const listaTrayectos = [
         "precios" : [0, 6.75, 5.5]
     },
     {
-        // Castellon - Aliante con Monbus
+        // Castellon - Alicante con Monbus
         "id": 12,
         "empresa": 4,
         "paradas": [1, 2, 3],
         "horarios" : ["10:00", "11:15", "13:55"],
         "precios" : [0, 6, 7.5]
+    },
+    {
+        // Madrid - Zaragoza con Alsa
+        "id": 13,
+        "empresa": 1,
+        "paradas": [5, 6, 7],
+        "horarios" : ["09:45", "11:35", "13:45"],
+        "precios" : [0, 13, 13.50]
+    },
+    {
+        // Madrid - Zaragoza con Alsa
+        "id": 14,
+        "empresa": 1,
+        "paradas": [7, 6, 5],
+        "horarios" : ["10:55", "13:10", "14:10"],
+        "precios" : [0, 14, 10.75]
+    },
+    {
+        // Valencia - Madrid con Monbus
+        "id": 15,
+        "empresa": 4,
+        "paradas": [2, 10, 5],
+        "horarios" : ["08:00", "09:10", "12:15"],
+        "precios" : [0, 6, 12]
+    },
+    {
+        // Madrid - Valencia con Monbus
+        "id": 16,
+        "empresa": 4,
+        "paradas": [5, 10, 2],
+        "horarios" : ["08:15", "11:55", "13:10"],
+        "precios" : [0, 6, 12]
     }
     ]
