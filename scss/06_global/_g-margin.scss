@@ -1,0 +1,55 @@
+.g--margin {
+  @each $key, $value in $margin {
+    &-#{$key} {
+      margin: var(--margin-#{$key});
+    }
+  }
+  @each $key, $value in $margin {
+    &-top-#{$key} {
+      margin-top: var(--margin-#{$key});
+    }
+
+    &-bottom-#{$key} {
+      margin-bottom: var(--margin-#{$key});
+    }
+
+
+    &-right-#{$key} {
+      margin-right: var(--margin-#{$key});
+    }
+
+    &-left-#{$key} {
+      margin-left: var(--margin-#{$key});
+    }
+
+    &-horizontal-#{$key} {
+      margin-right: var(--margin-#{$key}) ;
+      margin-left: var(--margin-#{$key});
+    }
+
+    &-vertical-#{$key} {
+      margin-top: var(--margin-#{$key});
+      margin-bottom: var(--margin-#{$key});
+    }
+  }
+
+  &-auto {
+    &-top {
+      margin-top: auto;
+    }
+
+    &-bottom {
+      margin-bottom:auto;
+    }
+
+
+    &-right {
+      margin-right: auto;
+    }
+
+    &-left {
+      margin-left: auto;
+    }
+  }
+
+}

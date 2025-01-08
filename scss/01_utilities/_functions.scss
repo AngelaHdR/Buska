@@ -1,0 +1,26 @@
+@function getBorderSize($size){
+    @return 10px * $size;
+}
+
+@function getKeyFromIndex($i){
+    $key: $i;
+    @return $key;
+}
+
+@function getValueFromIndex($i){
+    $value: 1px * $i * $i;
+    @return $value;
+}
+
+@function getCircleFromValue($size,$padding){
+    $value: $size-$padding;
+    @return $value;
+}
+
+@function doubleSize($size){
+    @return 2*$size;
+}
+
+@function removeByFour($size){
+    @return $size - 4;
+}

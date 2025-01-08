@@ -1,0 +1,106 @@
+$utilities: (
+  "padding": (
+    property: padding,
+    class: g--padding-,
+    usekeys: 0,
+    values: (
+      1: 1px,
+      2: 5px,
+      3: 10px,
+      4: 20px,
+      5: 40px,
+    ),
+  ),
+
+  "width": (
+    property: width,
+    class: g--width-,
+    usekeys: 0,
+    values: (
+      1: 10px,
+      2: 20px,
+      3: 25px,
+      4: 40px,
+      5: 70px,
+    ),
+  ),
+
+  "font-size": (
+    property: font-size,
+    class: g--font-size-,
+    usekeys: 1,
+    values: (
+      6px,
+      7px,
+      10px,
+      12px,
+      14px,
+      16px,
+      18px,
+      20px,
+    ),
+  ),
+
+  "height": (
+    property: height,
+    class: g--height-,
+    usekeys: 2,
+    max: 20,
+  ),
+
+  "$keys": (
+    xxxs,
+    xxs,
+    xs,
+    s,
+    m,
+    l,
+    xl,
+    xxl,
+    xxxl,
+  ),
+);
+$prefix: ".";
+
+@each $keyUtility, $utility in $utilities {
+  @if ($keyUtility!= "$keys") {
+    $property: map-get($utility, property);
+    $class: map-get($utility, class);
+    $usekeys: map-get($utility, usekeys);
+
+    @if ($usekeys == 0) {
+      $values: map-get($utility, values);
+      @each $keyValue, $value in $values {
+        #{$prefix}#{$class}#{$keyValue} {
+          #{$property}: #{$value};
+        }
+      }
+    }
+
+    @if ($usekeys == 1) {
+      $values: map-get($utility, values);
+      $keys: map-get($utilities, "$keys");
+      @for $i from 1 to length($values) {
+        $keyValue: nth($keys, $i);
+        $value: nth($values, $i);
+
+        #{$prefix}#{$class}#{$keyValue} {
+          #{$property}: $value;
+        }
+      }
+    }
+
+    @if ($usekeys == 2) {
+      $max: map-get($utility, max);
+      @for $i from 1 to $max + 1 {
+        $keyValue: getKeyFromIndex($i);
+        $value: getValueFromIndex($i);
+
+        #{$prefix}#{$class}#{$keyValue} {
+          #{$property}: $value;
+        }
+      }
+    } 
+
+  }
+}

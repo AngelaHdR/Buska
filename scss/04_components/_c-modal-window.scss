@@ -1,0 +1,42 @@
+.c-modal-window{
+    --c-modal-window-font-size-title: var(--font-size-xl);
+    --c-modal-window-font-size-body: var(--font-size-m);
+
+    --c-modal-window-font-family-button: var(--font-family-verdana);
+    --c-modal-window-font-family-text: var(--font-family-timesNewRoman);
+
+    --c-modal-window-color-bg: var(--color-grey-9);
+    --c-modal-window-color-font: var(--color-grey-3);
+
+    --c-modal-window-padding-exterior: var(--padding-6);
+    --c-modal-window-padding-interior: var(--padding-2);
+
+    
+    background-color: var(--c-modal-window-color-bg);
+    padding: var(--c-modal-window-padding-exterior);
+    font-family: var(--c-modal-window-font-family-text);
+
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        font-size: var(--c-modal-window-font-size-title);
+        padding: var(--c-modal-window-padding-interior);
+    }
+
+    &__body{
+        padding: var(--c-modal-window-padding-interior);
+        font-size: var(--c-modal-window-font-size-body);
+    }
+
+    &__footer{
+        display: flex;
+        justify-content: center;
+        padding: var(--c-modal-window-padding-interior);
+    }
+
+    &__button{
+        @include buttonFont(var(--c-modal-window-font-size-title),var(--c-modal-window-font-family-button));
+        @include buttonBorder(var(--c-modal-window-color-font),1px);
+        @include buttonBg(var(--c-modal-window-color-bg),var(--c-modal-window-color-font));
+    }
+}

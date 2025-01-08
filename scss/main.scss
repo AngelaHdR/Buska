@@ -1,0 +1,40 @@
+/*Utilities*/
+@import "./01_utilities/scss-variables",
+"./01_utilities/css-variables",
+"./01_utilities/functions",
+"./01_utilities/mixins",
+"./01_utilities/utilities";
+
+/*Base*/
+@import "./02_base/reset";
+
+/*Layouts*/
+@import "./03_layouts/l-flex",
+  "./03_layouts/l-piramide",
+  "./03_layouts/l-grid",
+  "./03_layouts/l-columns";
+
+/*Components*/
+@import "./04_components/c-button",
+"./04_components/c-card", 
+"./04_components/c-panel",
+"./04_components/c-image",
+"./04_components/c-menu-lateral",
+"./04_components/c-arbol",
+"./04_components/c-modal-window",
+"./04_components/c-formulario",
+"./04_components/c-toggle";
+
+/*Global*/
+@import "./06_global/g-background", 
+"./06_global/g-height",
+  "./06_global/g-width",
+  "./06_global/g-padding",
+  "./06_global/g-margin",
+  "./06_global/g-border",
+  "./06_global/g-color",
+  "./06_global/g-font-size",
+  "./06_global/g-position",
+  "./06_global/g-shadow",
+  "./06_global/g-text-align",
+  "./06_global/g-text-decoration";

@@ -1,0 +1,79 @@
+.c-formulario {
+    --c-formulario-font-family: var(--font-family-arial);
+    --c-formulario-font-size-titulo: var(--font-size-xl);
+    --c-formulario-font-size-label: var(--font-size);
+
+    --c-formulario-background-color-danger: var(--color-red);
+    --c-formulario-background-color-succes: var(--color-green);
+    --c-formulario-background-color-input: var(--color-grey-8);
+    --c-formulario-color-font: var(--color-grey-1);
+
+    --c-formulario-border-radius: var(--border-radius-1);
+    --c-formulario-border-color: var(--color-grey-6);
+
+    --c-formulario-padding-items: var(--padding-8);
+    --c-formulario-padding-label: var(--padding-4);
+    --c-formulario-margin-titulo: var(--margin-6);
+
+
+
+    &__titulo {
+        margin: var(--c-formulario-margin-titulo);
+        font-family: var(--c-formulario-font-family);
+        font-size: var(--c-formulario-font-size-titulo);
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: var(--c-formulario-padding-items);
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        &--horizontal {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__label {
+        padding-right: var(--c-formulario-padding-label);
+        font-family: var(--c-formulario-font-family);
+        font-size: var(--c-formulario-font-size-label);
+
+    }
+
+    &__input {
+        justify-content: center;
+        align-items: center;
+        background-color: var(--c-formulario-background-color-input);
+        @include buttonBorder(var( --c-formulario-color-font),1px);
+        &--danger:hover {
+            background-color: var(--c-formulario-background-color-danger);
+        }
+
+        &--succes:hover {
+            background-color: var(--c-formulario-background-color-succes);
+        }
+
+    }
+
+    &__button {
+        padding: 10px;
+
+        &--danger {
+            @include buttonBorder(var(--c-formulario-border-color), 1px);
+            @include buttonBg(var(--c-formulario-background-color-danger), var(--c-formulario-color-font));
+        }
+
+        &--succes {
+            @include buttonBorder(var(--c-formulario-border-color), 1px);
+            @include buttonBg (var(--c-formulario-background-color-succes), var(--c-formulario-color-font))
+        }
+
+    }
+
+}

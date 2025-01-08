@@ -1,0 +1,41 @@
+.c-arbol {
+  --c-arbol-padding: var(--padding-2);
+  --c-arbol-padding-nivel-2: var(--padding-6);
+  --c-arbol-margin: var(--margin-3);
+
+  --c-arbol-width: var(--width-30pc);
+
+  --c-arbol-font-size: var(--font-size-l);
+  --c-arbol-font-family: var(--font-family-verdana);
+
+  
+  padding: var(--c-arbol-padding);
+  width: var(--c-arbol-width);
+  height: 100vh;
+  border-right: 1px solid grey;
+  
+
+  &__nivel {
+    &-1 {
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid grey;
+      margin: var(--c-arbol-margin);
+    }
+    &-2 {
+      display: flex;
+      flex-direction: row;
+      padding: var(--c-arbol-padding);
+      padding-left: var(--c-arbol-padding-nivel-2);
+    }
+  }
+
+  &__texto {
+    font-size: var(--c-arbol-font-size);
+    font-family: var(--c-arbol-font-family);
+  }
+
+  &__icono {
+    margin-left: auto;
+  }
+}

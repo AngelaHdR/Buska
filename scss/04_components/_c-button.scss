@@ -1,0 +1,46 @@
+.c-boton {
+
+
+    @include buttonFont(var(--font-size-m),var(--font-family-arial));
+    @include buttonBorder(var(--color-principal),1px);
+    @include buttonBg(var(--color-fondo),var(--color-principal));
+    
+    padding: 14px;
+
+    &--funcion {
+        &-principal {
+            background-color: var(--color-principal);
+        }
+
+        &-alternative {
+            background-color: var(--color-alternative);
+        }
+
+        &-danger {
+            background-color: var(--color-red);
+        }
+
+        &-success {
+            background-color: var(--color-green);
+        }
+        
+        &-info{
+            background-color:var(--color-blue-7);
+        }
+    }
+
+    &--importancia {
+        &-secundaria {
+            color: var(--color-principal);
+            background-color: var(--color-fondo);
+            border: 1px solid var(--color-principal);
+        }
+
+        &-terciaria {
+            color: var(--color-principal);
+            background-color: var(--color-fondo);
+            border: 0px;
+        }
+    }
+
+}

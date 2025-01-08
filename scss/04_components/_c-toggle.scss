@@ -1,0 +1,50 @@
+.c-toggle {
+    --c-toggle-background: var(--color-grey-2);
+    --c-toggle-color-checked: var(--color-blue);
+    --c-toggle-color-unchecked: var(--color-red);
+
+    --c-toggle-width: var(--width-40);
+    --c-toggle-height: doubleSize(var(--c-toggle-width));
+    --c-toggle-size-circle: removeByFour(var(var(--c-toggle-width)));
+    --c-toggle-border-radius: var(--border-radius-5);
+
+    position: relative;
+    width: var(--c-toggle-width);
+    height: var(--c-toggle-height);
+    border-radius: var(--c-toggle-border-radius);
+
+    &__input {
+        opacity: 0;
+        position: absolute;
+        width: 0;
+        height: 0;
+
+        &:checked+.c-toggle__label {
+            .c-toggle__circle {
+                background-color: var(--c-toggle-color-checked);
+                transform: translateX(var(--c-toggle-height));
+            }
+        }
+    }
+
+    &__label {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: var(--c-toggle-border-radius);
+        background-color: var(--c-toggle-background);
+        cursor: pointer;
+    }
+
+    &__circle {
+        position: absolute;
+        width: var(--c-toggle-size-circle);
+        height: var(--c-toggle-size-circle);
+        background-color: var(--c-toggle-color-unchecked);
+        border-radius: var(--c-toggle-border-radius);
+        top: 2px;
+        left: 2px;
+        transition: transform 0.3s ease;
+    }
+}
