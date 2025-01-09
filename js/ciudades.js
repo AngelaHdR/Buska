@@ -1,43 +1,35 @@
 listCities = [
     {
-        id:1,
-        city:"Castellon",
+        id:"g1",
+        city:"Sarria",
         coordenates: "39.98567, -0.04935"
     },{
-        id:2,
-        city:"Valencia",
+        id:"g2",
+        city:"Noia",
         coordenates: "39.47391, -0.37966"
     },{
-        id:3,
-        city:"Alicante",
+        id:"g3",
+        city:"Finisterre",
         coordenates: "38.34517, -0.48149"
     },{
-        id:4,
-        city:"Murcia",
+        id:"g4",
+        city:"Muxia",
         coordenates: "37.98704, -1.13004"
     },{
-        id:5,
-        city:"Madrid",
+        id:"g5",
+        city:"Tuy",
         coordenates: "40.4165, -3.70256"
     },{
-        id:6,
-        city:"Siguenza",
+        id:"g6",
+        city:"Allariz",
         coordenates: "41.06892, -2.64308"
     },{
-        id:7,
-        city:"Zaragoza",
+        id:"g7",
+        city:"Combarro",
         coordenates: "41.65606, -0.87734"
     },{
-        id:8,
-        city:"Lleida",
+        id:"g8",
+        city:"A Guarda",
         coordenates: "41.61674, 0.62218"
-    },{
-        id:9,
-        city:"Barcelona",
-        coordenates: "41.38879, 2.15899"
-    },{
-        id:10,
-        city:"Utiel",
-        coordenates: "39.564126, -1.193592"
     }
 ]
